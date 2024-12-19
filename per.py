@@ -13,17 +13,3 @@ df.info()
 
 # 결측치 확인
 print(df.isnull().sum())  # 각 열에 있는 결측치의 수 출력
-
-# 결측치 행 제거
-df_dropped_rows = df.dropna()
-
-# 평균값으로 대체
-df_filled_mean = df.fillna(df.mean())
-
-
-# 결측치 시각화: 결측치가 있는 각 열의 개수를 막대 그래프로 표시
-df.isnull().sum().plot(kind='bar')
-plt.title("Housing Data")
-plt.xlabel('Columns')
-plt.ylabel('missing value')
-plt.show()
